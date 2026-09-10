@@ -1,0 +1,42 @@
+namespace Encapsulamento
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Pessoa p = new Pessoa();
+            p.Nome = "João";
+            Console.WriteLine(p.Nome);
+
+            //Atividade 2 
+
+
+            Produto t = new Produto();
+            //testando positivo
+            t.preco = 1;
+            Console.WriteLine(t.preco);
+
+            //testando negativo
+            t.preco = -1;
+            Console.WriteLine(t.preco);
+
+            //Atividade 3
+
+
+            Carro c = new Carro();
+            c.acelerar();
+            Console.WriteLine(c.velocidadeAtual);
+            c.acelerar();
+            Console.WriteLine(c.velocidadeAtual);
+            c.frear();
+            Console.WriteLine(c.velocidadeAtual);
+            c.acelerar();
+            Console.WriteLine(c.velocidadeAtual);
+            c.frear();
+            Console.WriteLine(c.velocidadeAtual);
+            //c.velocidadeAtual = 10;
+            // erro: propriedade ou o indexador "Carro.velocidadeAtual" não pode ser atribuído, pois é somente leitura
+
+        }
+    }
+}
